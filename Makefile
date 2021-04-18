@@ -21,7 +21,7 @@ TEST_DIR           = test
 APP_SOURCES        = $(shell find $(SRC_DIR) -name '*.c')
 APP_HEADERS        = $(shell find $(SRC_DIR) -name '*.h')
 APP_OBJS           = $(patsubst %.c, $(BUILD_DIR)/%.o, $(APP_SOURCES))
-APP_LIBS           = baz
+#APP_LIBS           = baz
 APP_EXEC           = app.out
 
 TEST_SRC_DIR       = $(TEST_DIR)/src
@@ -47,7 +47,7 @@ endif
 
 CFLAGS        = -c -Wall -I$(SRC_DIR) -I$(TEST_UNITY_INC_DIR) -I$(INC_DIR)
 EXTRA_CFLAGS  =
-LDFLAGS       = -L$(LIB_DIR) -l$(APP_LIBS)
+#LDFLAGS       = -L$(LIB_DIR) -l$(APP_LIBS)
 EXTRA_LDFLAGS =
 
 ifeq ($(DEBUG), on)
